@@ -158,7 +158,7 @@ def bandeira_sao_tome_e_principe():
 #código
 t.speed(0)
 
-bandeiras=textinput("obter país","digite um país entre os seguintes: japao")
+bandeiras=textinput("obter país","digite um país entre os seguintes: japao,russia,islandia,niger,bahamas,gambia,emirados arabes, noruega, grecia, sao tome e principe")
 if bandeiras == "japao":
     bandeira_japao()
 elif bandeiras == "russia":
@@ -173,7 +173,12 @@ elif bandeiras== "gambia":
     bandeira_gambia()
 elif bandeiras== "emirados arabes":
     bandeira_emirados_arabes()
-elif bandeiras== ""
+elif bandeiras== "noruega":
+    bandeira_noruega()
+elif bandeiras== "grecia":
+    bandeira_grecia()
+else:
+    bandeira_sao_tome_e_principe()
 
 # russia= bandeira_russia()
 # islandia= bandeira_islandia()
