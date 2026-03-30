@@ -7,8 +7,9 @@ from time import sleep
 t= Turtle()
 
 #funções de formas geométricas
-def retangulo(x,y,base,alt,color):
+def retangulo(x,y,base,alt,color,pencolor):
     t.up()
+    t.pencolor(pencolor)
     t.goto(x,y)
     t.begin_fill()
     t.fillcolor(color)
@@ -21,8 +22,9 @@ def retangulo(x,y,base,alt,color):
     t.end_fill()
 
 
-def circulo(x,y,raio,color):
+def circulo(x,y,raio,color,pencolor):
     t.pu()
+    t.pencolor(pencolor)
     t.goto(x,y)
     t.pd()
     t.begin_fill()
@@ -30,8 +32,9 @@ def circulo(x,y,raio,color):
     t.circle(raio)
     t.end_fill()
 
-def triangulo(x,y,color,lado):
+def triangulo(x,y,color,lado,pencolor):
     t.pu()
+    t.pencolor(pencolor)
     t.goto(x,y)
     t.begin_fill()
     t.fillcolor(color)
@@ -43,8 +46,9 @@ def triangulo(x,y,color,lado):
     t.lt(135)
     t.end_fill()
 
-def estrela(x,y,color):
+def estrela(x,y,color,pencolor):
     t.pu()
+    t.pencolor(pencolor)
     t.goto(x,y)
     t.pd()
     t.begin_fill()
@@ -56,8 +60,9 @@ def estrela(x,y,color):
         t.rt(144)
     t.end_fill()
 
-def quadrado(x,y,lado,color):
+def quadrado(x,y,lado,color,pencolor):
     t.pu()
+    t.pencolor(pencolor)
     t.goto(x,y)
     t.pd()
     t.begin_fill()
@@ -69,87 +74,87 @@ def quadrado(x,y,lado,color):
 
 #funções bandeiras
 def bandeira_japao():
-    retangulo(-200,-100, 400, 300, "white")
-    circulo(0,-20,70,"red")
+    retangulo(-200,-100, 400, 300, "white","black")
+    circulo(0,-20,70,"red","red")
     sleep(2)
     t.clear()
 
 
 def bandeira_russia():
-    retangulo(-200,-100, 400, 300, "white")
-    retangulo(-200,0,400,100,"blue")
-    retangulo(-200,-100,400,100,"red")
+    retangulo(-200,-100, 400, 300, "white","black")
+    retangulo(-200,0,400,100,"blue","blue")
+    retangulo(-200,-100,400,100,"red","red")
     sleep(2)
     t.clear()
 
 def bandeira_islandia():
-    retangulo(-200,-100, 400, 300, "#120A8F")
-    retangulo(-200,17,400,70,"white")
-    retangulo(-116,-100,70,300,"white")
-    retangulo(-200,31,400,40,"red")
-    retangulo(-102,-100,40,300,"red")
+    retangulo(-200,-100, 400, 300, "#120A8F","black")
+    retangulo(-200,17,400,70,"white","white")
+    retangulo(-116,-100,70,300,"white","white")
+    retangulo(-200,31,400,40,"red","red")
+    retangulo(-102,-100,40,300,"red","red")
     sleep(2)
     t.clear()
 
 def bandeira_niger():
-    retangulo(-200,-100, 400, 300, "orange")
-    retangulo(-200,0,400,100,"white")
-    retangulo(-200,-100,400,100,"green")
-    circulo(0,10,40,"orange")
+    retangulo(-200,-100, 400, 300, "orange","black")
+    retangulo(-200,0,400,100,"white","white")
+    retangulo(-200,-100,400,100,"green","green")
+    circulo(0,10,40,"orange","orange")
     sleep(2)
     t.clear()
 
 def bandeira_bahamas():
-    retangulo(-200,-100, 400, 300, "#008B8B")
-    retangulo(-200,0,400,100,"#FFD700")
-    triangulo(-200,200,"black",215)
+    retangulo(-200,-100, 400, 300, "#008B8B","black")
+    retangulo(-200,0,400,100,"#FFD700","#FFD700")
+    triangulo(-200,200,"black",215,"black")
     sleep(2)
     t.clear()
 
 def bandeira_gambia():
-    retangulo(-200,-100,400,300,"red")
-    retangulo(-200,0,400,100,"white")
-    retangulo(-200,-100,400,100,"green")
-    retangulo(-200,21,400,55,"#120A8F")
+    retangulo(-200,-100,400,300,"red","black")
+    retangulo(-200,0,400,100,"white","white")
+    retangulo(-200,-100,400,100,"green","green")
+    retangulo(-200,21,400,55,"#120A8F","#120A8F")
     sleep(2)
     t.clear()
 
 def bandeira_emirados_arabes():
-    retangulo(-200,-100,400,300,"green")
-    retangulo(-200,0,400,100,"white")
-    retangulo(-200,-100,400,100,"black")
-    retangulo(-200,-100,100,300,"red")
+    retangulo(-200,-100,400,300,"green","black")
+    retangulo(-200,0,400,100,"white","white")
+    retangulo(-200,-100,400,100,"black","black")
+    retangulo(-200,-100,100,300,"red","red")
     sleep(2)
     t.clear()
 
 def bandeira_noruega():
-    retangulo(-200,-100, 400, 300, "red")
-    retangulo(-200,17,400,70,"white")
-    retangulo(-116,-100,70,300,"white")
-    retangulo(-200,31,400,40,"#120A8F")
-    retangulo(-102,-100,40,300,"#120A8F")
+    retangulo(-200,-100, 400, 300, "red","black")
+    retangulo(-200,17,400,70,"white","white")
+    retangulo(-116,-100,70,300,"white","white")
+    retangulo(-200,31,400,40,"#120A8F","#120A8F")
+    retangulo(-102,-100,40,300,"#120A8F","#120A8F")
     sleep(2)
     t.clear()
 
 def bandeira_grecia():
-    retangulo(-200,-100, 400, 300, "white")
-    retangulo(-200,167,400,33,"#0F2284")
-    retangulo(-200,101,400,33,"#0F2284")
-    retangulo(-200,35,400,33,"#0F2284")
-    retangulo(-200,-31,400,33,"#0F2284")
-    retangulo(-200,-100,400,36,"#0F2284")
-    quadrado(-200,35,165,"#0F2284")
-    retangulo(-134,35,33,165,"white")
-    retangulo(-200,101,165,33,"white")
+    retangulo(-200,-100, 400, 300, "white","black")
+    retangulo(-200,167,400,33,"#0F2284","#0F2284")
+    retangulo(-200,101,400,33,"#0F2284","#0F2284")
+    retangulo(-200,35,400,33,"#0F2284","#0F2284")
+    retangulo(-200,-31,400,33,"#0F2284","#0F2284")
+    retangulo(-200,-100,400,36,"#0F2284","#0F2284")
+    quadrado(-200,35,165,"#0F2284","#0F2284")
+    retangulo(-134,35,33,165,"white","white")
+    retangulo(-200,101,165,33,"white","white")
     sleep(2)
     t.clear()
 
 def bandeira_sao_tome_e_principe():
-    retangulo(-200,-100, 400, 300, "green")
-    retangulo(-200,0,400,100,"yellow")
-    triangulo(-200,200,"red",215)
-    estrela(10,60,"black")
-    estrela(100,60,"black")
+    retangulo(-200,-100, 400, 300, "green","black")
+    retangulo(-200,0,400,100,"yellow","yellow")
+    triangulo(-200,200,"red",215,"red")
+    estrela(10,60,"black","black")
+    estrela(100,60,"black","black")
     sleep(2)
     t.clear()
 
@@ -180,15 +185,6 @@ elif bandeiras== "grecia":
 else:
     bandeira_sao_tome_e_principe()
 
-# russia= bandeira_russia()
-# islandia= bandeira_islandia()
-# niger= bandeira_niger()
-# bahamas= bandeira_bahamas()
-# gambia = bandeira_gambia()
-# emirados_arabes= bandeira_emirados_arabes()
-# noruega= bandeira_noruega()
-# grecia= bandeira_grecia()
-# sao_tome_e_principe= bandeira_sao_tome_e_principe()
 
 
 
